@@ -32,16 +32,16 @@ export default function Zutateneingabe(props) {
     <React.Fragment>
         
         <Grid container
-        direction="row"
+        direction="column"
         justify="center"
         alignItems="center">
-            <Grid>
+            <Grid >
                 <TextField value={values.ingredients} onChange={handleChange("ingredients")} label="Zutat" variant="outlined" />
             </Grid>
-            <Grid>
+            <Grid >
                 <Button onClick={handleAddElement} variant="contained">Hinzufügen</Button>
             </Grid>
-            <Grid>
+            <Grid >
                 <FormGroup>
                     <FormControlLabel
                         control={<Checkbox checked={props.shopping} onChange={props.handleChangeShopping}/>}
