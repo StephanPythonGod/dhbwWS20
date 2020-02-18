@@ -15,7 +15,8 @@ export default class Router extends Component {
     constructor (props){
         super(props);
         this.state = {
-            ingredients : []
+            ingredients : [],
+            shopping: false
         }
     } 
 
@@ -37,16 +38,22 @@ export default class Router extends Component {
         this.forceUpdate()
     }
 
+    handleChangeShopping(){
+        this.state.shopping = !this.state.shopping
+        this.forceUpdate()
+    }
+
+
     render() {
         return (
             <div>
             <BrowserRouter >
                 <App_Bar_Navigation/>
                     <Switch>
-                        <Route path="/Rezeptübersicht" render={(props) => <Rezeptübersicht {...props} ingredients={this.state.ingredients} />}/>
+                        <Route path="/Rezeptübersicht" render={(props) => <Rezeptübersicht {...props}  shopping={this.state.shopping} ingredients={this.state.ingredients} />}/>
                         <Route path="/Rezept/:id" component={Rezept}/>
-                        <Route path="/" render={(props) => <Zutateneingabe {...props} deleteIngredients={this.deleteIngredients.bind(this)} 
-                            ingredients={this.state.ingredients} updateIngredients={this.updateIngredients.bind(this)} />}/>
+                        <Route path="/" render={(props) => <Zutateneingabe {...props} shopping={this.state.shopping} deleteIngredients={this.deleteIngredients.bind(this)} 
+                            ingredients={this.state.ingredients} updateIngredients={this.updateIngredients.bind(this)} handleChangeShopping={this.handleChangeShopping.bind(this)}/>}/>
                     </Switch>
             </BrowserRouter>
             </div>

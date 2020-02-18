@@ -3,6 +3,9 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Zutatenliste from "./Zutatenliste"
 import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormGroup from '@material-ui/core/FormGroup';
 
 
 
@@ -27,6 +30,7 @@ export default function Zutateneingabe(props) {
 
     return (
     <React.Fragment>
+        
         <Grid container
         direction="row"
         justify="center"
@@ -37,6 +41,16 @@ export default function Zutateneingabe(props) {
             <Grid>
                 <Button onClick={handleAddElement} variant="contained">Hinzufügen</Button>
             </Grid>
+            <Grid>
+                <FormGroup>
+                    <FormControlLabel
+                        control={<Checkbox checked={props.shopping} onChange={props.handleChangeShopping}/>}
+                        label="Willst du noch einkaufen?"
+                        labelPlacement="start"
+                    />
+            </FormGroup>
+            </Grid>
+            
         </Grid>
         <Zutatenliste ingredients={props.ingredients} deleteIngredients = {props.deleteIngredients}/>
     </React.Fragment>
