@@ -9,6 +9,7 @@ import App_Bar_Navigation from "./App-Bar-Navigation"
 
 
 const LOCAL_STORAGE_KEY ="cocktailapp.ingredients"
+const LOCAL_STORAGE_SHOPPING = "cocktailapp.shopping"
 
 export default class Router extends Component {
 
@@ -22,7 +23,9 @@ export default class Router extends Component {
 
     componentDidMount(){
         const storedIngredients = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+        const storedShopping = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SHOPPING))
         if (storedIngredients) this.state.ingredients = storedIngredients
+        if (storedShopping) this.state.shopping = storedShopping
         this.forceUpdate()
     }
 
@@ -40,6 +43,7 @@ export default class Router extends Component {
 
     handleChangeShopping(){
         this.state.shopping = !this.state.shopping
+        localStorage.setItem(LOCAL_STORAGE_SHOPPING, JSON.stringify(this.state.shopping))
         this.forceUpdate()
     }
 
