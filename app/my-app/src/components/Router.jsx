@@ -4,8 +4,9 @@ import { BrowserRouter,
     Route  } from "react-router-dom";
 import Zutateneingabe from './Zutateneingabe';
 import Rezeptübersicht from './Rezeptübersicht';
-import Rezept from './Rezept';
+import RezeptAnsicht from './RezeptAnsicht';
 import App_Bar_Navigation from "./App-Bar-Navigation"
+
 
 
 const LOCAL_STORAGE_KEY ="cocktailapp.ingredients"
@@ -55,7 +56,7 @@ export default class Router extends Component {
                 <App_Bar_Navigation/>
                     <Switch>
                         <Route path="/Rezeptübersicht" render={(props) => <Rezeptübersicht {...props}  shopping={this.state.shopping} ingredients={this.state.ingredients} />}/>
-                        <Route path="/Rezept/:id" component={Rezept}/>
+                        <Route path="/Rezept/:id" component={RezeptAnsicht}/>
                         <Route path="/" render={(props) => <Zutateneingabe {...props} shopping={this.state.shopping} deleteIngredients={this.deleteIngredients.bind(this)} 
                             ingredients={this.state.ingredients} updateIngredients={this.updateIngredients.bind(this)} handleChangeShopping={this.handleChangeShopping.bind(this)}/>}/>
                     </Switch>

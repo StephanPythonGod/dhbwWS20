@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import Rezept from './Rezept';
+import Grid from '@material-ui/core/Grid';
+
 
 export default class Rezeptübersicht extends Component {
 
@@ -9,12 +11,14 @@ export default class Rezeptübersicht extends Component {
         this.state ={
             download : [],
             recipes : [],
-            matched : false
+            shopping : true
         }
     }
 
     componentDidMount(){
         this.getDatabaseUpdate()
+        this.state.shopping = this.props.shopping
+        console.log("Domponent did mount")
     }
 
     getDatabaseUpdate(){
@@ -53,12 +57,15 @@ export default class Rezeptübersicht extends Component {
                         ret.push(recipe[i][ingredients]);
                     }
                 }
+            if (i === "ingredients"){
             matchingRate = ret.length / recipe[i].length
-            }
             recipe.matchingRate = matchingRate
+            }
+            }
         })
         this.forceUpdate()
         this.state.recipes.sort(this.compareValues("matchingRate"))
+        this.forceUpdate()
     }
 
         // function was copy pasted from https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
@@ -87,15 +94,20 @@ export default class Rezeptübersicht extends Component {
     }
 
     render() {
-        console.log(this.state.recipes)
-
-        
-
         return(
-            <div>
-
-            </div>
+        this.state.recipes.map(item => {
+            return (
+                <Grid container
+                direction="column"
+                justify="center"
+                alignItems="center"
+                >
+                    <Grid>
+                        <Rezept key={item.name} shopping={this.state.shopping} recipe = {item}/>
+                    </Grid>
+                </Grid>
+            )   
+        })
         )
-        
     }
 }
