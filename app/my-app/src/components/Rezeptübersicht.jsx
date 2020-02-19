@@ -6,7 +6,9 @@ export default class Rezeptübersicht extends Component {
     constructor(props){
         super(props);
         this.state ={
-            recipes : []
+            download : [],
+            recipes : [],
+            matched : false
         }
     }
 
@@ -23,10 +25,38 @@ export default class Rezeptübersicht extends Component {
                     ...response.data[key], 
                     id : key
                 })
-            this.state.recipes = fetchedOrders
+            this.state.download = fetchedOrders
             }
-            this.forceUpdate()
+            this.setRecipes()
     })}
+
+    setRecipes(){
+        this.state.download.map(recipe => {
+            const ingredients = recipe.ingredients.split(",")
+            const recipename = recipe.name
+            var newelement = {}
+            newelement[recipename] = ingredients
+            this.state.recipes.push(newelement)
+        })
+        this.checkMatchingRateIngRec()
+    }
+
+    checkMatchingRateIngRec(){
+        this.state.recipes.forEach( recipe => {
+            var ret = []
+            var matchingRate = 0
+            for(var i in recipe) {
+                for(var ingredients in recipe[i]){
+                    if(this.props.ingredients.indexOf(recipe[i][ingredients]) > -1){
+                        ret.push(recipe[i][ingredients]);
+                    }
+                }
+            matchingRate = ret.length / recipe[i].length
+            }
+            recipe.matchingRate = matchingRate
+        })
+        this.forceUpdate()
+        }
 
     render() {
         console.log(this.state.recipes)
