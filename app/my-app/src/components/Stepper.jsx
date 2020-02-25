@@ -27,7 +27,11 @@ const useStyles = makeStyles(theme => ({
 export default function VerticalLinearStepper(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
+
+
+  if(props.recipe){
   const steps = getSteps();
+
 
   function getSteps() {
     return props.recipe.steps;
@@ -99,4 +103,12 @@ export default function VerticalLinearStepper(props) {
       )}
     </div>
   );
+  }
+  else{
+    return(
+      <div>
+
+      </div>
+    )
+  }
 }

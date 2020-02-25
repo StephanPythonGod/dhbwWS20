@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import axios from "axios"
 import RezpetZutaten from './RezpetZutaten';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import Stepper from "./Stepper"
 
 
@@ -43,10 +44,14 @@ export default class RezeptAnsicht extends Component {
             const ingredients = item.ingredients.split(",")
             const amount = item.amount.split(",")
             const recipename = item.name
+            const steps = item.steps.split(",")
+            const description = item.description.split(";")
             var newelement = {}
             newelement["ingredients"] = ingredients
             newelement["name"] = recipename
             newelement["amount"] = amount
+            newelement["steps"] = steps
+            newelement["description"] = description
             this.state.recipe.push(newelement)
         })
         this.forceUpdate()
@@ -66,6 +71,7 @@ export default class RezeptAnsicht extends Component {
                     <RezpetZutaten recipe = {this.state.recipe[0]}/>
                 </Grid>
                 <Grid>
+                    <Stepper recipe= {this.state.recipe[0]}/>
                 </Grid>
             </Grid>
         )
