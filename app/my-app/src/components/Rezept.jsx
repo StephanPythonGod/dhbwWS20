@@ -27,6 +27,9 @@ const StyledButton = withStyles(styles)(({ classes, color, ...other }) => (
 ));
 
 export default function Rezept(props) {
+
+  // Set Color by Matching Rate
+
   var color = "default"
 
     if (props.recipe.matchingRate >= 0.5){
@@ -36,6 +39,9 @@ export default function Rezept(props) {
     if (props.recipe.matchingRate === 1){
         color = "green"
   }
+
+  // differentiation between shopping true or false
+
   if (!props.shopping){
     if (props.recipe.matchingRate ===1){
         return (

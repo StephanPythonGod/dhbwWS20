@@ -12,15 +12,18 @@ import FormGroup from '@material-ui/core/FormGroup';
 
 export default function Zutateneingabe(props) {
 
+    //catch of changes of textfield
+
     const [values, setValues] = useState({
         ingredients : ""
     })
 
     const handleChange = prop => event => {
         setValues({ ...values, [prop]: event.target.value})
-      };
+      }
 
     function handleAddElement(){
+        //callback function to add ingredient to state of router.jsx
         if (values.ingredients === "") return
         props.updateIngredients(values.ingredients)
         setValues({

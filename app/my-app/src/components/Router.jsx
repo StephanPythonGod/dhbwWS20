@@ -22,6 +22,8 @@ export default class Router extends Component {
         }
     } 
 
+    //saving the State variables in the cache 
+
     componentDidMount(){
         const storedIngredients = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
         const storedShopping = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SHOPPING))
@@ -29,6 +31,8 @@ export default class Router extends Component {
         if (storedShopping) this.state.shopping = storedShopping
         this.forceUpdate()
     }
+
+    // 3 callback functions that get passed as props
 
     updateIngredients (input){
         this.state.ingredients.push(input)

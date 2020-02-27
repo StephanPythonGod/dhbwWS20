@@ -18,7 +18,6 @@ export default class Rezeptübersicht extends Component {
     componentDidMount(){
         this.getDatabaseUpdate()
         this.state.shopping = this.props.shopping
-        console.log("Domponent did mount")
     }
 
     getDatabaseUpdate(){
@@ -48,6 +47,7 @@ export default class Rezeptübersicht extends Component {
     }
 
     checkMatchingRateIngRec(){
+        //calculating MatchingRate and add them to the objects as new key and value
         this.state.recipes.forEach( recipe => {
             var ret = []
             var matchingRate = 0

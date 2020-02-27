@@ -40,6 +40,7 @@ export default class RezeptAnsicht extends Component {
     })}
 
     engineerDonwload(){
+        //Creating the recipe object and add this to state 
         this.state.download.map(item => {
             const ingredients = item.ingredients.split(",")
             const amount = item.amount.split(",")

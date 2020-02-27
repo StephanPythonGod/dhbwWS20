@@ -1,0 +1,74 @@
+
+{"recipes":{
+"Pinacolada":{
+"amount":"3 cl,4 cl,9 cl,1 cl",
+"description":"Alle Zutaten mit Eis in den Shaker geben und kräftig schütteln;Nach dem Shaken alles in ein großes Glas umfüllen;Zum Schluss nur noch nach Belieben mit aufgespießten Früchten garnieren.",
+"ingredients":"weißer Rum,Kokosmilch,Ananassaft,Sahne",
+"name":"Pinacolada",
+"steps":"Schütteln,Umfüllen,Garnieren"
+},
+"Caipirinha":{
+"amount":"5 cl,1, ,2 TL",
+"description":"Die Limette wird geachtelt und mit Hilfe eines Holzstößels direkt im Glas unter Zugabe des Zuckers ausgepresst.;Danach das Glas mit Crushed Ice auffüllen und Cachaça und Limettensaft darüber geben.;Nach Belieben mit Hilfe eines Barlöffels noch einmal kurz mischen und servieren.",
+"ingredients":"Cachaca,Limette gewürfelt,Limettensaft,brauner Zucker",
+"name":"Caipirinha",
+"steps":"Limette bearbeiten,Crushed Ice,Servieren"
+},
+"Tequila Sunrise":{
+"amount":"4.5 cl,9 cl,1.5 cl",
+"description":"Den Tequila, Orangen- und Zitronensaft zusammen mit ein paar Eiswürfeln shaken.;Eiswürfel in ein Glas geben und den Cocktail durch ein Barsieb eingießen.;Die Grenadine an einem Löffel in den Cocktail fließen lassen.",
+"ingredients":"Tequila,Orangensaft,Grenadine",
+"name":"Tequila Sunrise",
+"steps":"Shaken,Barsieben,Grenadine fließen lassen"
+},
+"Mojito":{
+"amount":"6 cl,3 cl,2 cl, 2 BL",
+"description":"Minzblätter und Limette gründlich waschen. Dann die Minzblätter zusammen mit dem Zucker in ein Glas geben und mit dem Stößel zerdrücken.;Anschließend die geachtelte Limette dazugeben und ebenfalls mit dem Stößel zerdrücken.;Rum und Crushed Ice dazugeben und abschließend mit Sodawasser auffüllen.",
+"ingredients":"weißer Rum,Limettensaft,Zuckersirup,Rohrzucker,Sodawasser,Minzblätter",
+"name":"Mojito",
+"steps":"Stößeln,Stößeln x2,Der Rest"
+},
+"Long Island Ice Tea":{
+"amount":"1.5 cl,1.5 cl,1.5 cl,1.5 cl,2.5 cl,3 cl,1 Schuss",
+"description":"Alle Zutaten bis auf die Cola im Shaker kräftig shaken und anschließend in ein hohes Glas geben.;Eis dazugeben und mit Cola auffüllen.;Nach belieben mit einer Zitronenscheibe garnieren.",
+"ingredients":"Tequila,Wodka,Triple Sec,Gin,Zitronensaft,Gomme Sirup,Cola",
+"name":"Long Island Ice Tea",
+"steps":"Shake it up,Cola mit Eis,Zitronenscheiben"
+},
+"Cosmopolitan":{
+"amount":"2 cl,1 cl,1 cl,2 cl",
+"description":"Alle Zutaten zusammen mit Eis shaken.;Danach alles in ein gekühlte Martiniglas geben;Nach Belieben mit Limettenscheibe garnieren.",
+"ingredients":"Wodka,Limettensaft,Triple Sec,Cranberrysaft",
+"name":"Cosmopolitan",
+"steps":"ICE,Gekühlt,Nach Belieben"
+},
+"Cuba Libre":{
+"amount":"4-6 cl,12 cl,eine halbe,1 cl",
+"description":"Die Limette in Achteln über dem Glas ausdrücken und hinein geben.;Dann Eiswürfel oder Crushed Ice dazugeben.;Zum Schluss mit Rum, Cola und Limettensaft auffüllen",
+"ingredients":"weißer Rum,Cola,Limette,Limettensaft",
+"name":"Cuba Libre",
+"steps":"Limetten bearbeiten,Ice Ice,Baby"
+},
+"Margarita":{
+"amount":"4 cl,2 cl,2 cl,1 cl",
+"description":"Für den Salzrand das Margaritaglas zuerst in Limettensaft und dann vorsichtig in Salz eintauchen.;Die Zutaten einfach zusammen mit Eis shaken und in das vorbereitete Glas geben.;Klassisch mit einer Limettenscheibe garnieren.",
+"ingredients":"Tequila,Cointreau,Lime Juice,Zuckersirup",
+"name":"Margarita",
+"steps":"Saltbay,Just Shake it,Klassisch"
+},
+"Daiquiri":{
+"amount":"4.5 cl,2.5 cl,1.5 cl",
+"description":"Alle Zutaten in einem Shaker mixen.;Danach den Inhalt des Shakers in eine gekühlte Cocktailschale geben;Klassisch mit einer Limettenscheibe garnieren.",
+"ingredients":"Rum,Limettensaft,Zuckersirup",
+"name":"Daiquiri",
+"steps":"Mixen,Kühlen,Klassisch"
+},
+"Sex on the Beach":{
+"amount":"4 cl,2 cl,4 cl,4 cl",
+"description":"Einfach alle Zutaten zusammen mit Eis in den Shaker geben.;Nach dem Shaken in ein Highballglas umfüllen.;Zum Schluss nur noch mit der Orangenscheibe und evtl. mit Schirmchen garnieren.",
+"ingredients":"Wodka,Pfirsich Likör,Cranberrysaft,Orangensaft",
+"name":"Sex on the Beach",
+"steps":"Stran,Ausziehen,Techtelmechtel"
+}
+}
+}

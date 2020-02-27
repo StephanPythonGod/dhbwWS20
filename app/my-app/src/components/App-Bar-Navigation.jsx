@@ -11,6 +11,8 @@ import Grid from '@material-ui/core/Grid';
 
 export default function App_Bar_Navigation({props}) {
 
+    // App Bar Navigation functional Component both Buttons are Link Components with Icons
+
     return (
         <div>
             <Grid container

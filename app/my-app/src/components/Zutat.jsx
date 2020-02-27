@@ -4,10 +4,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 
 
-
-
-
 export default function Zutatenliste(props) {
+
+  //ingredients with callback to delete onchange
 
     const handleChange = event => {
         props.deleteIngredient(props.ingredient)

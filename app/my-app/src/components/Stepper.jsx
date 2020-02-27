@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+//inspired by https://material-ui.com/components/steppers/
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -85,7 +87,7 @@ export default function VerticalLinearStepper(props) {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Finish' : 'Weiter'}
+                    {activeStep === steps.length - 1 ? 'Fertig' : 'Weiter'}
                   </Button>
                 </div>
               </div>
