@@ -1,6 +1,4 @@
 # dhbwWS20
-WebDevelopment
+Project for the Course "Web Development"
 
-[Dokumentation](Dokumentation/Dokumentation.pdf)
-
-Matrikelnummer: 9347857
+[Documentation](Dokumentation/Dokumentation.pdf)
